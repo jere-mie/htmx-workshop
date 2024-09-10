@@ -1,0 +1,7 @@
+<h1>{{ article.title }}</h1>
+<p>📅{{ article.date }}</p>
+<p>
+    <button hx-get="/article/{{article.id}}/edit" hx-target="#articlebody" class="btn btn-sm btn-warning">Edit</button>
+    <button hx-delete="/article/{{article.id}}" hx-target="#articlebody" class="btn btn-sm btn-danger">Delete</button>
+</p>
+{{ article.content | safe }}

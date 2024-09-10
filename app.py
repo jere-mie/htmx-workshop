@@ -49,6 +49,54 @@ def get_article(id):
     return render_template('article.html', article=article)
 
 ##########################################################
+# Start of new code
+##########################################################
+
+# DELETE
+@app.delete("/article/<int:id>")
+def delete_article(id):
+    article = Article.query.get_or_404(id)
+    db.session.delete(article)
+    db.session.commit()
+    return """
+    <div>
+        <div class="m-2 p-2 bg-success rounded">Successfully Deleted Article!</div>
+        <a href="/" class="btn btn-primary">Return Home</a>
+    </div>
+    """
+
+# CREATE
+@app.get("/article/new")
+def create_article_form():
+    return render_template("form_create.html")
+
+@app.post("/article")
+def create_article():
+    article = get_article_from_request(request)
+    db.session.add(article)
+    db.session.commit()
+    return render_template("articles_list.html", articles=get_articles())
+
+# UPDATE
+@app.get("/article/<int:id>/edit")
+def edit_article_form(id):
+    article = Article.query.get_or_404(id)
+    return render_template("form_edit.html", article=article)
+
+@app.put("/article/<int:id>")
+def edit_article(id):
+    existing_article = Article.query.get_or_404(id)
+    new_article_data = get_article_from_request(request)
+    existing_article.title = new_article_data.title
+    existing_article.content = new_article_data.content
+    db.session.commit()
+    return render_template("article_details.html", article=existing_article)
+
+##########################################################
+# End of new code
+##########################################################
+
+##########################################################
 # End of Routes Section
 ##########################################################
 
