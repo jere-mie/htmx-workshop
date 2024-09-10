@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Welcome to My Blog!</h1>
+
+<div id="articlesarea">
+    <button class="btn btn-lg btn-success">New Article</button>
+    {% for article in articles %}
+    <div class="container bg-body-tertiary rounded p-5 m-4">
+        <h2><a href="/article/{{ article.id }}">{{ article.title }}</a></h2>
+        <p>📅{{ article.date }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

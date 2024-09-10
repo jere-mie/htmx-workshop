@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="articlebody" class="container bg-body-tertiary p-3">
+    <h1>{{ article.title }}</h1>
+    <p>📅{{ article.date }}</p>
+    <p>
+        <button class="btn btn-sm btn-warning">Edit</button>
+        <button class="btn btn-sm btn-danger">Delete</button>
+    </p>
+    {{ article.content | safe }}    
+</div>
+{% endblock %}
