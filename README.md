@@ -7,6 +7,14 @@ Created and presented by [Jeremie Bornais](https://github.com/jere-mie).
 
 Slides will be released soon!
 
+## Note
+
+You're currently looking at the **starter code**. Use this branch if you're following along with the workshop or if you want a starting point without HTMX fully integrated yet.
+
+If you'd like to see **sample finished code**, with HTMX fully integrated, check out the [sample-completed branch](https://github.com/jere-mie/htmx-workshop/tree/sample-completed).
+
+Moreover, if you'd like to see how we got from the starter code to the sample finished code, check out [this PR](https://github.com/jere-mie/htmx-workshop/pull/1/files) which highlights all of the differences/updates.
+
 ## Resources
 
 ### HTMX Resources
@@ -16,6 +24,7 @@ Slides will be released soon!
 - [HTMX Code Snippets](https://htmx.org/examples) (HIGHLY recommend checking this one out)
 - [HTMX Essays](https://htmx.org/essays) (Check this out if you want to learn the nerdy theory behind HTMX - I had a lot of fun going through these)
 - [Hypermedia Systems Book](https://hypermedia.systems) (A more complete look into the theory behind Hypermedia and HTMX. Freely available online)
+- [HTMX in 100 Seconds By Fireship](https://www.youtube.com/watch?v=r-GSGH2RxJs)
 
 ### Flask Resources
 
