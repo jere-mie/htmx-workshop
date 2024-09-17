@@ -1,0 +1,8 @@
+<div class="m-2 p-2 bg-success rounded">Successfully Created Article!</div>
+<button hx-get="/article/new" hx-target="#articlesarea" class="btn btn-lg btn-success">New Article</button>
+{% for article in articles %}
+<div class="container bg-body-tertiary rounded p-5 m-4">
+    <h2><a href="/article/{{ article.id }}">{{ article.title }}</a></h2>
+    <p>📅{{ article.date }}</p>
+</div>
+{% endfor %}
