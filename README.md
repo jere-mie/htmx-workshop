@@ -5,7 +5,7 @@ Created and presented by [Jeremie Bornais](https://github.com/jere-mie).
 
 ## Slides
 
-Slides will be released soon!
+Slides are available [here](docs/slides.pdf)
 
 ## Note
 
